@@ -2189,3 +2189,15 @@ input, select, textarea {
 			}
 
 		}
+
+/* My changes */
+	.description {
+		font-size: 0.8em;   
+		line-height: 1.4;   
+		color: #666;
+	}
+	/* Reduce space between game title and image */
+	.col-4 > p:first-of-type {
+		margin-bottom: 4px;   /* space between title and image */
+		padding-top: 0;       /* remove extra top padding if needed */
+	}
