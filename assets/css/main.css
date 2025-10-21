@@ -2191,13 +2191,102 @@ input, select, textarea {
 		}
 
 /* My changes */
-	.description {
-		font-size: 0.8em;   
-		line-height: 1.4;   
-		color: #666;
-	}
-	/* Reduce space between game title and image */
-	.col-4 > p:first-of-type {
-		margin-bottom: 4px;   /* space between title and image */
-		padding-top: 0;       /* remove extra top padding if needed */
-	}
+.description {
+	font-size: 0.8em;   
+	line-height: 1.4;   
+	color: #666;
+}
+/* Reduce space between game title and image */
+.col-4 > p:first-of-type {
+	margin-bottom: 4px;   /* space between title and image */
+	padding-top: 0;       /* remove extra top padding if needed */
+}
+
+/* Work Section Container */
+.work-section {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+/* Each Game Item */
+.work-item {
+	display: flex;
+	align-items: flex-start;
+	gap: 2rem;
+	flex-wrap: wrap;
+}
+
+/* Media Column (Thumbnail + GIF) */
+.media {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	flex: 0 0 60%;      /* take up 60% of the row for bigger media */
+	max-width: 60%;     /* allow larger width */
+}
+
+/* Thumbnail Image */
+.media-main {
+	width: 100%;           
+	max-height: 500px;     /* bigger thumbnail */
+	object-fit: cover;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* GIF Image */
+.media-gif {
+	width: 100%;           
+	max-height: 500px;     /* bigger GIF */
+	object-fit: cover;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+	transition: transform 0.3s ease;
+}
+
+/* Description Column */
+.description {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+/* Description Title */
+.description h3 {
+	margin-top: 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.5rem 0.9rem;       /* compact */
+    background-color: #FFB6C1;    /* pastel pink */
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;           /* slightly rounded */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    width: auto;                  /* do not stretch */
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #FFC2D1;    /* slightly lighter pastel on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+/* Divider Line Between Games */
+.divider {
+	border: none;
+	border-top: 1px solid #ccc;  
+	margin: 2rem 0;
+}
